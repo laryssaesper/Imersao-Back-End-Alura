@@ -1,7 +1,9 @@
 # Anotações sobre Imersão Dev Back-End Alura
 
 ### Conceitos Básicos
+
 #### Arrow Functions
+
 São funções escritas de uma forma mais concisa em JavaScript
 
 Sintaxe:
@@ -59,6 +61,25 @@ Foi criada uma pasta específica para o back-end do projeto. Os programas utiliz
 * na casa do 400 são na parte do cliente.
 
 **Foi Aberta a Conta no MongoDB**
+
+***
+
+### Aula 3 - 20241120
+
+* Criação do banco de dados com mongodb
+* Instalação dele usando **npm install mongodb** no console
+* Criação do arquivo .env para lidar com variáveis de conexão. Colocar no .env como o valor da variável o link de conexão que o mongodb proporcionou
+* em package.json:
+>"scripts": {
+    "dev": "node --watch --env-file=.env server.js",
+    "test": ""
+  },
+
+Para rodar automáticamente ao colocar **npm run dev** no console ao invés de precisar digitar tudo novamente
+
+* Separar códigos do server.js em subpastas (config, models, routes) dentro da pasta src
+
+***
 
 ## Código comentado
 
