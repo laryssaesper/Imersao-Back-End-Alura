@@ -81,55 +81,19 @@ Para rodar automáticamente ao colocar **npm run dev** no console ao invés de p
 
 ***
 
-## Código comentado
+### Aula 4 - 20241121
 
-> import express from "express";
-* primeiro importamos a instância "express" da pasta "express" no já citado node_modules
+**Explicação das Pastas**
+* config: configura a conexão do banco de dados
+* models: contém as funções para enviar os dados ao banco
+* routes: cria as rotas para interação com o back-end (como, por exemplo, a visualização dos posts)
+* controller: o que junta as rotas com os dados em si
 
-> const app = express();
-* coloca a função express dentro da variável app, que vai fazer a manipulação do nosso servidor. Nota-se que express também é uma função.
+**Verbos HTTP**
+* operações básicas: get (ler), post (criar/enviar), put (atualizar), delete (deletar)
 
-> app.listen(3000, () => {
-    console.log("Servidor Escutando...");
-});
-* indica que o servidor irá ouvir qualquer requisição da porta 3000 (padrão para localhost) e mostrará no console a frase "Servidor Escutando...".
+**Thunder Client** ferramente de teste de api para CARACTERES
 
-> app.get("/api", (req, res) => {
-    res.status(200).send("Boas Vindas à Imersão!");
-});
-* cria rota tipo "get" que "pega" sua requisição (req) e devolve uma resposta (res).
-* Quando digitamos **localhost:3000/api** irá aparecer uma mensagem de boas vindas, caso o status seja 200 (ok).
+**Postman** ferramenta de teste de api que pode lidar com imagens
 
-> const posts = [
-    {
-      id: 1,
-      descricao: 'Um gatinho ronronando no sol',
-      imagem: 'https://placekitten.com/400/300'
-    }
-];
-* Foi criado um *array* para servir como base de dados.
-* Nele, contém objetos do tipo chave-valor.
-* Para criar mais objetos, eles precisam estar entre chaves e serem separados por vírgula.
-* o id é para ser capaz de retornar um só post, ao invés de todos
-
-> app.use(express.json());
-* faz com que as requisições devolvam como resposta documentos em formato json.
-
-> app.get("/posts", (req, res) => {
-    res.status(200).json(posts);
-});
-* foi mudada nossa resposta de requerimento para que possamos retornar nossos posts em formato json
-
-> function buscarPost (id){
-    return posts.findIndex((post)=>{
-        return post.id === Number(id)
-    })
-};
-* Função que busca dentro do array cada objeto pelo seu id
-* findIndex é uma função para procurar determinada coisa dentro de um array
-
-> app.get("/posts/:id", (req, res) => {
-    const index = buscarPost(req.params.id);
-    res.status(200).json(posts[index]);
-});
-* ao digitar localhost/posts/id, sendo o id o número do id do post, ele irá retornar o post escolhido
+* usar o postman para o upload de imagens
