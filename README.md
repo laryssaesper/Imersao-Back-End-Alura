@@ -97,3 +97,10 @@ Para rodar automáticamente ao colocar **npm run dev** no console ao invés de p
 **Postman** ferramenta de teste de api que pode lidar com imagens
 
 * usar o postman para o upload de imagens
+
+****
+
+### Aula 5 - 20241122
+
+* atualização de post, criando a rota, o modelo e o controlador (função)
+* criação da função para o Google Gemini criar descrições para as imagens baseado no id de cada com o PUT
